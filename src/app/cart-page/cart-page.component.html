@@ -1,0 +1,65 @@
+<app-page-not-found [visible]="!cart || cart.items.length <=0" notFoundmsg="Item not found" resetLinkText="Go To Homepage"></app-page-not-found>
+
+
+<div *ngIf="cart && cart.items.length >0" class="container">
+    <ul>
+        <li *ngFor="let cartItem of cart.items">
+            <div>
+                <img [src]="cartItem.food.imageUrl" [alt]="cartItem.food.name">
+            </div>
+            <div>
+                <a routerLink="/food/{{cartItem.food.id}}">
+                {{cartItem.food.name}}
+            </a>
+            </div>
+            <div>
+                <select #quantitySelect (change)="changeQuantity(cartItem, quantitySelect.value )">
+                     <option>1</option>
+                     <option>2</option>
+                     <option>3</option>
+                     <option>4</option>
+                     <option>5</option>
+    
+                </select>
+            </div>
+
+            <div>
+                {{cartItem.price | currency:'INR'}}
+            </div>
+            <button class="remove-button" (click)="removeFromCart(cartItem)">Remove</button>
+        </li>
+
+
+    </ul>
+    <div class="instructions">
+        <h2>Please add Instructions</h2>
+        <div *ngFor="let instruct of instructionssArray.controls; last as isLast; index as idx" class="input-row">
+            <mat-form-field>
+                <input matInput [formControl]="instruct">
+            </mat-form-field>
+            <!-- <button mat-icon-button color="warn" (click)="removeInputControl(idx)" *ngIf="instructionssArray.length > 1">
+                <mat-icon>remove_circle</mat-icon>
+            </button>
+            <button mat-icon-button color="primary" *ngIf="isLast" (click)="addInputControl()">
+                <mat-icon>add_circle</mat-icon>
+            </button> -->
+
+        </div>
+
+    </div>
+
+
+    <div class="checkout">
+        <h2>Instructions</h2>
+        <div>{{instructionssArray.valueChanges | async | json}}</div>
+        <div class="food-count">
+            {{cart.items.length}}
+        </div>
+
+        <div class="total-price">
+            {{cart.totalPrice | currency:'INR'}}
+        </div>
+        <a routerLink="/login">Proceed to Checkout</a>
+    </div>
+
+</div>

@@ -1,0 +1,205 @@
+{
+  "topping": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "topping": "Admin",
+      "id": 4
+    },
+    {
+      "topping": "Technician",
+      "id": 5
+    },
+    {
+      "topping": "Technician",
+      "id": 6
+    },
+    {
+      "topping": "Telecaller",
+      "id": 7
+    },
+    {
+      "topping": "Technician",
+      "id": 8
+    },
+    {
+      "topping": "Technician",
+      "id": 9
+    },
+    {
+      "topping": "Technician",
+      "id": 10
+    },
+    {
+      "topping": "Telecaller",
+      "id": 11
+    },
+    {
+      "topping": "Technician",
+      "id": 12
+    },
+    {
+      "topping": "",
+      "id": 13
+    },
+    {
+      "topping": "Technician",
+      "id": 14
+    },
+    {
+      "topping": "",
+      "id": 15
+    },
+    {
+      "topping": "",
+      "id": 16
+    },
+    {
+      "topping": "",
+      "id": 17
+    },
+    {
+      "topping": "",
+      "id": 18
+    },
+    {
+      "topping": "",
+      "id": 19
+    },
+    {
+      "topping": "Technician",
+      "id": 20
+    },
+    {
+      "topping": "Technician",
+      "id": 21
+    },
+    {
+      "topping": "Telecaller",
+      "id": 22
+    },
+    {
+      "topping": "Technician",
+      "id": 23
+    },
+    {
+      "topping": "Technician",
+      "id": 24
+    },
+    {
+      "topping": "",
+      "id": 25
+    },
+    {
+      "gender": "0",
+      "id": 26
+    },
+    {
+      "gender": "0",
+      "id": 27
+    },
+    {
+      "gender": "1",
+      "id": 28
+    },
+    {
+      "gender": "1",
+      "id": 29
+    },
+    {
+      "gender": "1",
+      "id": 30
+    },
+    {
+      "gender": "0",
+      "id": 31
+    },
+    {
+      "gender": "1",
+      "id": 32
+    },
+    {
+      "gender": "1",
+      "id": 33
+    },
+    {
+      "gender": "1",
+      "id": 34
+    },
+    {
+      "gender": "1",
+      "id": 35
+    },
+    {
+      "gender": "0",
+      "id": 36
+    },
+    {
+      "gender": "1",
+      "id": 37
+    },
+    {
+      "gender": "1",
+      "id": 38
+    },
+    {
+      "gender": "1",
+      "id": 39
+    },
+    {
+      "gender": "0",
+      "id": 40
+    },
+    {
+      "gender": "0",
+      "id": 41
+    },
+    {
+      "name": "nisha",
+      "id": 42
+    },
+    {
+      "name": "badal",
+      "id": 43
+    },
+    {
+      "name": "raj",
+      "id": 44
+    },
+    {
+      "name": "harry",
+      "id": 45
+    },
+    {
+      "name": "krisha",
+      "id": 46
+    },
+    {
+      "name": "rohan",
+      "id": 47
+    },
+    {
+      "name": "hi",
+      "id": 48
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

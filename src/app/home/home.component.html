@@ -1,0 +1,30 @@
+<ul>
+    <li *ngFor="let food of foods">
+        <a routerLink="/food/{{food.id}}">
+            <img src="{{food.imageUrl}}" alt="food images">
+            <div class="content">
+                <div class="name">{{food.name}}
+                    <!-- <div class="customize"> <button type="button" class="btn btn-dark btn-sm">Customize🡢</button></div> -->
+                </div>
+
+
+
+                <span class="veg {{food.veg}}">▣</span>
+                <div class="food-item">
+                    <div class="ingredients">
+                        <span *ngFor="let ingredient of food.ingredients">
+{{ingredient}}
+</span>
+                    </div>
+                </div>
+
+                <div class="price">
+                    {{food.price|currency:'INR'}}
+                </div>
+                <div class="add">
+                    <button type="button" class="btn btn-outline-danger">Add</button>
+                </div>
+            </div>
+        </a>
+    </li>
+</ul>

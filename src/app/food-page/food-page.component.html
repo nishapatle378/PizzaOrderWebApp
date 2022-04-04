@@ -1,0 +1,132 @@
+<app-page-not-found [visible]="!food" notFoundmsg="Product Not Found!" resetLinkText="Go To Homepage"></app-page-not-found>
+<div *ngIf="food" class="container">
+    <img [src]="food.imageUrl" [alt]="food.name">
+
+    <div class="details">
+        <div class="header">
+
+            <span class="name">{{food.name}}</span>
+
+        </div>
+
+        <div class="ingredients">
+            <span *ngFor="let ingredient of food.ingredients">
+{{ingredient}}
+</span>
+        </div>
+
+        <div class="cook-time">
+            <span>
+    Time to cook about: <strong>⏱{{food.cookTime}}</strong> Minutes
+</span>
+        </div>
+
+
+
+        <div class="price">
+            <span class="veg {{food.veg}}">▣</span>&nbsp; {{food.price|currency:'INR'}}
+        </div>
+
+        <div class="add">
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Add</button>
+            <!-- <button (click)="postUserDetails()" type="button" class="btn btn-danger">Add to cart</button> -->
+
+        </div>
+
+    </div>
+
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Customize</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="details">
+                    <div class="header">
+                        <img [src]="food.imageUrl" [alt]="food.name" style="width: 500px;
+                        height: 275px;
+                        margin: auto;
+                        border-radius: inherit;
+                        margin: -48px 0px 0px -64px;">
+                        <div>
+
+                            <span class="fname">{{food.name}}</span>
+                        </div>
+
+                        <form>
+                            <div class="custom">
+                                <span class="veg1 {{food.veg}}">▣</span> Add veg toppings @Rs. 60 each
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Grilled Mushrooms
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  Onion
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  Paneer
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  Red Pepper
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  Jalapeno                                
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  Golden Corn                               
+                                 </label>
+                            </div>
+
+                            <div class="custom">
+                                <span>Select Size</span>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                 Small (Serves 1)
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                  Medium (Serves 2)
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                  Large (Serves 4)
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <!-- <button type="button" class="btn btn-secondary" >Close</button> -->
+                <button (click)="addToCart()" type="button" class="btn btn-primary" data-bs-dismiss="modal">Add to cart</button>
+            </div>
+        </div>
+    </div>
+</div>
